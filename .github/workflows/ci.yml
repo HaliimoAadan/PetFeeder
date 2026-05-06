@@ -18,12 +18,11 @@ jobs:
         with:
           dotnet-version: '10.x'
 
-      - name: Find solution file
-        run: find server -name "*.sln" -o -name "*.csproj"
-
       - name: Restore dependencies
-        run: dotnet restore
-        working-directory: server/PetFeederAPI
+        run: dotnet restore server/PetFeederAPI/PetFeederAPI.sln
+
+      - name: Build
+        run: dotnet build server/PetFeederAPI/PetFeederAPI.sln --no-restore
 
   build-frontend:
     name: Build Frontend (React)
