@@ -1,0 +1,38 @@
+# ========================
+# SECRETS — NEVER COMMIT
+# ========================
+.env
+.env.local
+.env.*.local
+appsettings.Development.json
+secrets.json
+credentials.h
+
+# ========================
+# C# / Rider / ASP.NET
+# ========================
+server/bin/
+server/obj/
+server/.vs/
+server/*.user
+server/*.suo
+server/.idea/
+
+# ========================
+# React / Node / Vite
+# ========================
+client/node_modules/
+client/dist/
+client/.vite/
+
+# ========================
+# C++ / PlatformIO
+# ========================
+firmware/.pio/
+firmware/.vscode/
+
+# ========================
+# OS junk
+# ========================
+.DS_Store
+Thumbs.db
