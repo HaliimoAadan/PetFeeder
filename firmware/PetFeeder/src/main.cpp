@@ -14,11 +14,29 @@
 #define IN3 14
 #define IN4 15
 
+// LDR pin
+#define LDR_PIN 34
+#define FOOD_LOW_THRESHOLD 800
+
 AccelStepper stepper(AccelStepper::HALF4WIRE, IN1, IN3, IN2, IN4);
 
 WiFiClient espClient;
 PubSubClient client(espClient);
+unsigned long lastFoodCheck = 0;
 
+void checkFoodLevel() {
+    int ldrValue = analogRead(LDR_PIN);
+    Serial.print("LDR value: ");
+    Serial.println(ldrValue);
+
+    if (ldrValue > FOOD_LOW_THRESHOLD) {
+        digitalWrite(LED_ORANGE, HIGH);
+        client.publish("petfeeder/food", "low");
+    } else {
+        digitalWrite(LED_ORANGE, LOW);
+        client.publish("petfeeder/food", "ok");
+    }
+}
 
 void feedNow() {
     Serial.println("Dispensing food...");
@@ -104,6 +122,11 @@ void loop() {
         setLeds(false);
         connectMQTT();
     }
+
+    if (millis() - lastFoodCheck > 5000) {
+    lastFoodCheck = millis();
+    checkFoodLevel();
+}
     client.loop();
     stepper.run();
 }
