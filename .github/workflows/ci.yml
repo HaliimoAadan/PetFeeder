@@ -1,10 +1,12 @@
 name: CI
-
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
   build-backend:
@@ -12,15 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '10.x'
-
       - name: Restore dependencies
         run: dotnet restore server/PetFeederAPI/PetFeederAPI.sln
-
       - name: Build
         run: dotnet build server/PetFeederAPI/PetFeederAPI.sln --no-restore
 
@@ -29,16 +28,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-
+          node-version: '22'
       - name: Install dependencies
         run: npm install
         working-directory: client
-
       - name: Build
         run: npm run build
         working-directory: client
