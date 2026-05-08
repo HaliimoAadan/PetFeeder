@@ -16,7 +16,7 @@
 
 // LDR pin
 #define LDR_PIN 34
-#define FOOD_LOW_THRESHOLD 800
+#define FOOD_LOW_THRESHOLD 500
 
 AccelStepper stepper(AccelStepper::HALF4WIRE, IN1, IN3, IN2, IN4);
 

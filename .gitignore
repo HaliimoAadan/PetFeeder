@@ -11,8 +11,8 @@ credentials.h
 # ========================
 # C# / Rider / ASP.NET
 # ========================
-server/bin/
-server/obj/
+**/bin/
+**/obj/
 server/.vs/
 server/*.user
 server/*.suo

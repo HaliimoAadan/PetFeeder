@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PetFeederAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8adbc452b320f08282470f03b8b8b079b3d229de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf329d742268b41773efa3c708a88479b2c0a24c")]
 [assembly: System.Reflection.AssemblyProductAttribute("PetFeederAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PetFeederAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
