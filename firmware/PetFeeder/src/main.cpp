@@ -82,17 +82,11 @@ void connectWiFi() {
 void connectMQTT() {
     client.setServer(MQTT_BROKER, MQTT_PORT);
     client.setCallback(mqttCallback);
-    Serial.print("Connecting to Flespi...");
     while (!client.connected()) {
-        if (client.connect("PetFeeder", FLESPI_TOKEN, "")) {
-            Serial.println("connected!");
+        if (client.connect("PetFeeder", FLESPI_TOKEN, "", "petfeeder/status", 0, true, "offline")) {
             client.subscribe("petfeeder/command");
-            client.publish("petfeeder/status", "online");
-        } else {
-            Serial.print("failed, error code: ");
-            Serial.println(client.state());
-            delay(1000);
-        }
+            client.publish("petfeeder/status", "online", true);
+        } else { delay(1000); }
     }
 }
 

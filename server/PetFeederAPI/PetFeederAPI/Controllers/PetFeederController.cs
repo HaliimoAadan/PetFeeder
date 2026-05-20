@@ -50,4 +50,20 @@ public class PetFeederController : ControllerBase
     {
         return Ok(new { level = _mqtt.FoodLevel });
     }
+    
+    /// <summary>Get the ESP32 connection status</summary>
+    [HttpGet("status")]
+    public IActionResult GetStatus()
+    {
+        return Ok(new { esp = _mqtt.EspStatus, timestamp = DateTime.UtcNow });
+    }
+    
+    /// <summary>Attempt to reconnect to MQTT broker</summary>
+    [HttpPost("reconnect")]
+    public async Task<IActionResult> Reconnect()
+    {
+        await _mqtt.ReconnectAsync();
+        await Task.Delay(2000);
+        return Ok(new { esp = _mqtt.EspStatus });
+    }
 }

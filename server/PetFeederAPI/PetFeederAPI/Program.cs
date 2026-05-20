@@ -27,6 +27,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddSingleton<MqttService>();
 builder.Services.AddSingleton<IMqttService>(sp => sp.GetRequiredService<MqttService>());
 builder.Services.AddHostedService(sp => sp.GetRequiredService<MqttService>());
+builder.Services.AddHostedService<FeedSchedulerService>();
 
 var app = builder.Build();
 

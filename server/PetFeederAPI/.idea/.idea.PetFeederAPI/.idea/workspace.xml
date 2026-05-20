@@ -9,25 +9,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fc955bd-ec99-4459-8cd9-7447807fa987" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/PetFeederAPI/Controllers/PetFeederController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFeederAPI/Interfaces/IMqttService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFeederAPI/Models/FeedingEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PetFeederAPI/Services/MqttService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFeederAPI/Controllers/NotificationController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFeederAPI/Controllers/ScheduleController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFeederAPI/Models/ScheduledFeed.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFeederAPI/Models/ScheduledFeedFailure.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PetFeederAPI/Services/FeedSchedulerService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/api/petFeederApi.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/src/api/petFeederApi.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/components/dashboard/FeedButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/src/components/Modal.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/components/dashboard/FoodLevelCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/src/types/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/components/history/HistoryTable.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/components/layout/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/src/components/layout/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/components/layout/Navbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/components/status/StatusCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/pages/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/src/pages/Dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/pages/History.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/src/pages/History.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/pages/Schedule.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../client/src/pages/Schedule.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/pages/Status.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../client/src/types/Index.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../firmware/PetFeeder/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../firmware/PetFeeder/src/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PetFeederAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PetFeederAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFeederAPI/PetFeederAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/PetFeederAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFeederAPI/Controllers/PetFeederController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/Controllers/PetFeederController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFeederAPI/Db/DbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/Db/DbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFeederAPI/Interfaces/IMqttService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/Interfaces/IMqttService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFeederAPI/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFeederAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFeederAPI/bin/Debug/net10.0/PetFeederAPI.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/bin/Debug/net10.0/PetFeederAPI.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFeederAPI/Services/MqttService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/Services/MqttService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFeederAPI/bin/Debug/net10.0/PetFeederAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/bin/Debug/net10.0/PetFeederAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFeederAPI/bin/Debug/net10.0/PetFeederAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/bin/Debug/net10.0/PetFeederAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.AssemblyInfoInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/PetFeederAPI.sourcelink.json" afterDir="false" />
@@ -35,14 +48,7 @@
       <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/refint/PetFeederAPI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/refint/PetFeederAPI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/rjsmrazor.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/rpswa.dswa.cache.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/Debug/net10.0/rpswa.dswa.cache.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/PetFeederAPI.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/PetFeederAPI.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/PetFeederAPI.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/PetFeederAPI.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/PetFeederAPI.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/PetFeederAPI.csproj.nuget.g.targets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PetFeederAPI/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/PetFeederAPI/obj/rider.project.model.nuget.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,10 +73,17 @@
     &quot;accountId&quot;: &quot;5eb39371-f768-48fe-9c17-fe15acef5bcd&quot;
   }
 }</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/PetFeederAPI/Controllers/NotificationController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PetFeederAPI/Controllers/ScheduleController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PetFeederAPI/Models/ScheduledFeed.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PetFeederAPI/Services/FeedSchedulerService.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -95,6 +108,11 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
 }</component>
   <component name="RunDashboard">
@@ -161,13 +179,16 @@
       <updated>1778073259507</updated>
       <workItem from="1778073263442" duration="2064000" />
       <workItem from="1778230889910" duration="274000" />
-      <workItem from="1778231235803" duration="5616000" />
+      <workItem from="1778231235803" duration="8910000" />
+      <workItem from="1778244062179" duration="751000" />
+      <workItem from="1779279743434" duration="9094000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

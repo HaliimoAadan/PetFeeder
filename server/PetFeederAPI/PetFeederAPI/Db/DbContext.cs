@@ -9,4 +9,6 @@ public class AppDbContext : DbContext
 
     public DbSet<FeedingEvent> FeedingEvents { get; set; }
     public DbSet<FoodLevelEvent> FoodLevelEvents { get; set; }
+    public DbSet<ScheduledFeed> ScheduledFeeds { get; set; }
+    public DbSet<ScheduledFeedFailure> ScheduledFeedFailures { get; set; }
 }

@@ -15,7 +15,10 @@ public class MqttService : IHostedService, IMqttService
     private readonly IServiceScopeFactory _scopeFactory;
     private IMqttClient _client = null!;
     private MqttClientOptions _options = null!;
+    private bool _isConnecting = false;
+
     public string FoodLevel { get; private set; } = "unknown";
+    public string EspStatus { get; private set; } = "offline";
 
     public MqttService(IOptions<FlespiOptions> flespiOptions, ILogger<MqttService> logger, IServiceScopeFactory scopeFactory)
     {
@@ -44,6 +47,9 @@ public class MqttService : IHostedService, IMqttService
 
     private async Task ConnectAsync(CancellationToken cancellationToken = default)
     {
+        if (_isConnecting || _client.IsConnected) return;
+        _isConnecting = true;
+
         try
         {
             await _client.ConnectAsync(_options, cancellationToken);
@@ -56,6 +62,10 @@ public class MqttService : IHostedService, IMqttService
         catch (Exception ex)
         {
             _logger.LogError("Failed to connect to Flespi: {Message}", ex.Message);
+        }
+        finally
+        {
+            _isConnecting = false;
         }
     }
 
@@ -97,6 +107,12 @@ public class MqttService : IHostedService, IMqttService
                 _logger.LogInformation("Food low event saved to database");
             }
         }
+
+        if (topic == "petfeeder/status")
+        {
+            EspStatus = payload;
+            _logger.LogInformation("ESP32 status: {Status}", payload);
+        }
     }
 
     public async Task PublishAsync(string topic, string payload)
@@ -107,12 +123,23 @@ public class MqttService : IHostedService, IMqttService
             await ConnectAsync();
         }
 
+        if (!_client.IsConnected)
+        {
+            _logger.LogError("Cannot publish — client still not connected.");
+            return;
+        }
+
         var message = new MqttApplicationMessageBuilder()
             .WithTopic(topic)
             .WithPayload(payload)
             .Build();
 
         await _client.PublishAsync(message);
+    }
+
+    public async Task ReconnectAsync()
+    {
+        await ConnectAsync();
     }
 
     public async Task StopAsync(CancellationToken cancellationToken)

@@ -1,21 +1,19 @@
-import { useEffect, useState } from 'react'
-import axios from 'axios'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/layout/Layout';
+import Dashboard from './pages/Dashboard';
+import History from './pages/History';
+import Schedule from './pages/Schedule';
 
-function App() {
-  const [status, setStatus] = useState('checking...')
-
-  useEffect(() => {
-    axios.get(`${import.meta.env.VITE_API_URL}/api/ping`)
-        .then(res => setStatus(res.data.status))
-        .catch(() => setStatus('cannot reach backend'))
-  }, [])
-
-  return (
-      <div>
-        <h1>Pet Feeder</h1>
-        <p>Backend status: <strong>{status}</strong></p>
-      </div>
-  )
+export default function App() {
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Dashboard />} />
+                <Route element={<Layout />}>
+                    <Route path="/history" element={<History />} />
+                    <Route path="/schedule" element={<Schedule />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    );
 }
-
-export default App
